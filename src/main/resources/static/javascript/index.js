@@ -1,6 +1,6 @@
 //import _, { union } from 'lodash';
-import orderAPI from './marketAPIFetch.js';
-import intList from './investmentsArray';
+//import orderAPI from './marketAPIFetch.js';
+//import intList from './investmentsArray';
 
 const numberArray = [];
 

@@ -5,7 +5,6 @@ const orderAPI = (() => {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '66d7085b62msh288087059e8ae40p1c5d91jsnb5aa211a244e',
       'X-RapidAPI-Host': 'apidojo-yahoo-finance-v1.p.rapidapi.com'
     } 
   };
