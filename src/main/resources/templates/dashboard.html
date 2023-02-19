@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +16,7 @@
   <header class="p-3 text-bg-dark">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center">
-        <a href="index.html" class="justify-content-center justify-content-md-start col-12 col-md-6 col-lg-7 col-xl-8 fs-4 d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <a th:href="@{index}" class="justify-content-center justify-content-md-start col-12 col-md-6 col-lg-7 col-xl-8 fs-4 d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
           <p style="font-size: 1.8rem;" id="logo">MyPortfolio</p>
         </a>
 
@@ -27,10 +27,10 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="n_bar">
               <ul class="navbar-nav justify-content-end align-items-center">
-                <li class="nav-item active"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                <li class="nav-item active"><a class="nav-link" th:href="@{dashboard}">Dashboard</a></li>
                 <li class="nav-item active"><a class="nav-link" href="#">Feedback</a></li>
-                <li class="nav-item active"><a class="nav-link" href="login.html" id="dash-tab-login">Login</a></li>
-                <li class="nav-item active"><a class="nav-link" href="signup.html" id="dash-tab-signup">SignUp</a></li>
+                <li class="nav-item active"><a class="nav-link" th:href="@{login}" id="dash-tab-login">Login</a></li>
+                <li class="nav-item active"><a class="nav-link" th:href="@{signup}" id="dash-tab-signup">SignUp</a></li>
               </ul>
             </div>
           </div>

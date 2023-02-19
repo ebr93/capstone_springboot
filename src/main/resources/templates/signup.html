@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +16,7 @@
     <header class="p-3 text-bg-dark">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center">
-                <a href="index.html" class="justify-content-center justify-content-md-start col-12 col-md-6 col-lg-7 col-xl-8 fs-4 d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <a th:href="@{index}" class="justify-content-center justify-content-md-start col-12 col-md-6 col-lg-7 col-xl-8 fs-4 d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
                     <p style="font-size: 1.8rem;" id="logo">MyPortfolio</p>
                 </a>
 
@@ -27,10 +27,10 @@
                         </button>
                         <div class="collapse navbar-collapse justify-content-end" id="n_bar">
                             <ul class="navbar-nav justify-content-center align-items-center">
-                                <li class="nav-item active"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                                <li class="nav-item active"><a class="nav-link" th:href="@{dashboard}">Dashboard</a></li>
                                 <li class="nav-item active"><a class="nav-link" href="#">Feedback</a></li>
-                                <li class="nav-item active"><a class="nav-link" href="login.html">Login</a></li>
-                                <li class="nav-item active"><a class="nav-link" href="signup.html">SignUp</a></li>
+                                <li class="nav-item active"><a class="nav-link" th:href="@{login}">Login</a></li>
+                                <li class="nav-item active"><a class="nav-link" th:href="@{signup}">SignUp</a></li>
                             </ul>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
         <div class="col-12 col-md-7">
             <!-- Form -->
             <form class="row g-3 needs-validation signup-validation">
-                <div class="col-md-5">
+                <div class="col-md-6">
                     <label for="fName" class="form-label">First name</label>
                     <input type="text" class="form-control" id="fName" required>
                     <!--
@@ -60,7 +60,7 @@
                     </div>
                     -->
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-6">
                     <label for="lName" class="form-label">Last name</label>
                     <input type="text" class="form-control" id="lName" required>
                     <!--
@@ -69,11 +69,7 @@
                     </div>
                     -->
                 </div>
-                <div class="col-md-2">
-                    <label for="userMI" class="form-label">MI</label>
-                    <input type="text" class="form-control" id="userMI" maxlength="1">
-                </div>
-                <div class="col-md-8">
+                <div class="col-md-6">
                     <label for="newEmail" class="form-label">Email</label>
                     <input type="email" class="form-control" id="newEmail" required>
                     <!--
@@ -83,9 +79,9 @@
                 <!--
 
                 -->
-                <div class="col-md-4">
-                    <label for="zipInput" class="form-label">Zip</label>
-                    <input type="text" class="form-control" id="zipInput" maxlength="5" pattern="^\d{5}$" required>
+                <div class="col-md-6">
+                    <label for="streetAddress" class="form-label">Street Address</label>
+                    <input type="text" class="form-control" id="streetAddress" required>
                     <!--
                     <div class="invalid-feedback">
                       A valid zip number must contain 5 digits
@@ -110,7 +106,7 @@
                 </div>
 
                 <div class="col-12">
-                    <a href="login.html"><button class="btn btn-primary" id="signupBttn" type="submit">Submit form</button></a>
+                    <a th:href="@{login}"><button class="btn btn-primary" id="signupBttn" type="submit">Submit form</button></a>
                 </div>
             </form>
         </div>
